@@ -13,7 +13,7 @@ export default function VetsPage() {
       <nav className="sticky top-0 z-50 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt="Delta CPA Group" width={40} height={40} className="h-10 w-auto" />
+            <Image src="/logo.png" alt="Delta CPA Group" width={60} height={60} className="h-16 w-auto" />
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-slate-600 hover:text-blue-900 font-medium transition text-sm">
