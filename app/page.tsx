@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-900">Delta CPA Group</div>
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/logo.png" alt="Delta CPA Group" width={40} height={40} className="h-10 w-auto" />
+          </Link>
           <div className="flex items-center gap-4">
             <Link href="/login" className="text-slate-600 hover:text-blue-900 font-medium transition text-sm">
               Existing Clients: Login/Support
@@ -116,7 +119,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-slate-900 mb-12">Why Delta CPA</h2>
           <div className="bg-white rounded-lg p-12 border-2 border-blue-200 max-w-2xl mx-auto">
             <div className="space-y-4 text-left">
-              <p className="text-slate-700"><span className="font-bold text-blue-900">35+ years</span> of tax strategy & CPA leadership</p>
+              <p className="text-slate-700"><span className="font-bold text-blue-900">35+ years</span> of strategy & CPA leadership</p>
               <p className="text-slate-700"><span className="font-bold text-blue-900">Vet-specific</span> tax and sales-tax SOPs</p>
               <p className="text-slate-700"><span className="font-bold text-blue-900">On-time service credit guarantee</span> &mdash; we back our promise</p>
               <p className="text-slate-700"><span className="font-bold text-blue-900">Day 15 close</span> with Vet Profit Scorecard every month</p>
