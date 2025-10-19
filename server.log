@@ -2,10 +2,16 @@
 > vet-accounting@0.1.0 dev
 > next dev --turbopack
 
+ ⚠ Port 3000 is in use by an unknown process, using available port 3002 instead.
    ▲ Next.js 15.5.3 (Turbopack)
-   - Local:        http://localhost:3000
-   - Network:      http://169.254.0.21:3000
+   - Local:        http://localhost:3002
+   - Network:      http://169.254.0.21:3002
 
  ✓ Starting...
- ✓ Ready in 1468ms
-[?25h
+ ✓ Ready in 3.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 15.7s
+ GET / 200 in 17111ms
+ GET / 200 in 476ms
+ ⚠ Cross origin request detected from chubby-icons-swim.lindy.site to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
