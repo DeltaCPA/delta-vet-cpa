@@ -140,6 +140,111 @@ export default function VetsPage() {
         </div>
       </section>
 
+      {/* Service Tiers */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-slate-900 text-center mb-4">Three Service Levels</h2>
+          <p className="text-center text-slate-600 mb-16 max-w-2xl mx-auto">Customized to your practice&apos;s needs. Billed every 4 weeks (13 cycles/year).</p>
+          
+          <div className="grid grid-cols-3 gap-8 mb-12">
+            {/* Compliance */}
+            <Card className="p-8 border-2 border-slate-200 hover:border-blue-400 transition">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Compliance</h3>
+              <p className="text-slate-600 mb-6">For practices wanting clean books & tax returns.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Day 15 close</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Monthly bookkeeping</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Annual tax return</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">1 tax review/year</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold">Learn More</Button>
+            </Card>
+
+            {/* Advisory - Most Popular */}
+            <Card className="p-8 border-2 border-teal-400 bg-gradient-to-br from-teal-50 to-white relative">
+              <div className="absolute top-4 right-4 bg-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold">MOST POPULAR</div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Advisory</h3>
+              <p className="text-slate-600 mb-6">For practices wanting tax savings & growth clarity.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Everything in Compliance</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Quarterly tax planning</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Vet Profit Scorecard</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Tax Savings Certificate</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold">Get Started</Button>
+            </Card>
+
+            {/* CFO */}
+            <Card className="p-8 border-2 border-slate-200 hover:border-blue-400 transition">
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">CFO</h3>
+              <p className="text-slate-600 mb-6">For practices scaling & optimizing operations.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Everything in Advisory</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Monthly KPI review</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Budget & forecast</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Growth modeling</span>
+                </li>
+              </ul>
+              <Button className="w-full bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold">Learn More</Button>
+            </Card>
+          </div>
+
+          {/* Add-ons */}
+          <div className="bg-slate-50 rounded-lg p-8">
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Add-Ons Available</h3>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex justify-between items-center pb-4 border-b border-slate-200">
+                <span className="text-slate-700">Extra entity (S-Corp, LLC, etc.)</span>
+              </div>
+              <div className="flex justify-between items-center pb-4 border-b border-slate-200">
+                <span className="text-slate-700">Multi-location (per location)</span>
+              </div>
+              <div className="flex justify-between items-center pb-4 border-b border-slate-200">
+                <span className="text-slate-700">Payroll band (50-100 employees)</span>
+              </div>
+              <div className="flex justify-between items-center pb-4 border-b border-slate-200">
+                <span className="text-slate-700">Inventory & sales tax module</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Capacity + Urgency */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
