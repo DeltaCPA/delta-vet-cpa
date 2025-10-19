@@ -2,11 +2,14 @@
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowRight, CheckCircle2, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, HelpCircle } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function VetsPage() {
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -42,9 +45,12 @@ export default function VetsPage() {
               </div>
             </div>
 
-            <div className="flex gap-4 mb-8">
-              <Button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-6 text-base font-semibold">
+            <div className="flex flex-col gap-4 mb-8">
+              <Button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-6 text-base font-semibold w-fit">
                 Get the Vet Tax Savings Diagnostic (15 min) <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-base font-semibold w-fit">
+                Download the Vet Profit Scorecard Template
               </Button>
             </div>
             
@@ -63,13 +69,13 @@ export default function VetsPage() {
           <div className="grid grid-cols-5 gap-4 mb-12">
             <Card className="p-6 bg-white border-2 border-blue-200 hover:border-teal-400 transition">
               <p className="text-sm text-slate-600 font-semibold mb-2">COGS %</p>
-              <p className="text-3xl font-bold text-blue-900">28-32%</p>
-              <p className="text-xs text-slate-500 mt-2">Industry benchmark</p>
+              <p className="text-3xl font-bold text-blue-900">&lt;20%</p>
+              <p className="text-xs text-slate-500 mt-2">Target range</p>
             </Card>
             <Card className="p-6 bg-white border-2 border-blue-200 hover:border-teal-400 transition">
               <p className="text-sm text-slate-600 font-semibold mb-2">Payroll %</p>
-              <p className="text-3xl font-bold text-blue-900">42-48%</p>
-              <p className="text-xs text-slate-500 mt-2">Of gross revenue</p>
+              <p className="text-3xl font-bold text-blue-900">&lt;45%</p>
+              <p className="text-xs text-slate-500 mt-2">Target range</p>
             </Card>
             <Card className="p-6 bg-white border-2 border-blue-200 hover:border-teal-400 transition">
               <p className="text-sm text-slate-600 font-semibold mb-2">Revenue/DVM</p>
@@ -132,7 +138,10 @@ export default function VetsPage() {
           <Shield className="w-16 h-16 mx-auto mb-6 text-teal-400" />
           <h3 className="text-4xl font-bold mb-4">On-Time Credit Guarantee</h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            On-time close + scheduled quarterly review, or that cycle&apos;s fee is credited.
+            Day 15 close + scheduled quarterly review, or that cycle&apos;s fee is credited.
+          </p>
+          <p className="text-sm text-blue-200 mb-8 max-w-2xl mx-auto">
+            <em>Service-level guarantee: We guarantee a Day 15 month-end close and a scheduled quarterly review; if we miss either for reasons within our control, that cycle&apos;s fee is credited. Client delays and third-party outages pause the clock. No IRS or financial-outcome guarantees.</em>
           </p>
           <Button className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 font-semibold text-lg">
             Get the Vet Tax Savings Diagnostic (15 min)
@@ -144,7 +153,7 @@ export default function VetsPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-4">Three Service Levels</h2>
-          <p className="text-center text-slate-600 mb-16 max-w-2xl mx-auto">Customized to your practice&apos;s needs. Billed every 4 weeks (13 cycles/year).</p>
+          <p className="text-center text-slate-600 mb-16 max-w-2xl mx-auto">Customized to your practice&apos;s needs. Billed every 4 weeks (13 cycles/year). Includes annual review clause to keep delivery fully funded.</p>
           
           <div className="grid grid-cols-3 gap-8 mb-12">
             {/* Compliance */}
@@ -194,6 +203,10 @@ export default function VetsPage() {
                   <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-700">Tax Savings Certificate</span>
                 </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Business + owner returns (current-year)</span>
+                </li>
               </ul>
               <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold">Get Started</Button>
             </Card>
@@ -213,11 +226,15 @@ export default function VetsPage() {
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-700">Budget & forecast</span>
+                  <span className="text-slate-700">13-week cash model</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-700">Growth modeling</span>
+                  <span className="text-slate-700">Expansion modeling</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700">Growth planning</span>
                 </li>
               </ul>
               <Button className="w-full bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold">Learn More</Button>
@@ -225,7 +242,7 @@ export default function VetsPage() {
           </div>
 
           {/* Add-ons */}
-          <div className="bg-slate-50 rounded-lg p-8">
+          <div className="bg-slate-50 rounded-lg p-8 mb-12">
             <h3 className="text-xl font-bold text-slate-900 mb-6">Add-Ons Available</h3>
             <div className="grid grid-cols-2 gap-6">
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
@@ -242,28 +259,49 @@ export default function VetsPage() {
               </div>
             </div>
           </div>
+
+          {/* Back Books & Back Taxes */}
+          <div className="bg-blue-50 rounded-lg p-8 border-2 border-blue-200">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">Back Books & Back Taxes (per prior year)</h3>
+            <p className="text-slate-600 mb-6">Cleanup + tie-out + returns. We change timing/features, not the price.</p>
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-bold text-slate-900 mb-3">Standard Lane</h4>
+                <p className="text-slate-600 text-sm">Work begins <strong>after Apr 15</strong> (default)</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 mb-3">Rush Lane</h4>
+                <p className="text-slate-600 text-sm"><strong>Jan–Mar</strong> start with expedite fee (limited slots)</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Capacity + Urgency */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-slate-900 mb-12">60-Day Sprint Cohort Dates</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-12">60-Day Sprint Cohort Starts</h2>
           <p className="text-lg text-slate-600 mb-12">Limited spots. First-come with deposit.</p>
           
           <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mb-12">
             <div className="bg-slate-50 rounded-lg p-8 border-2 border-teal-400">
-              <p className="text-2xl font-bold text-slate-900 mb-2">January 8</p>
+              <p className="text-2xl font-bold text-slate-900 mb-2">January 8, 2026</p>
               <p className="text-teal-600 font-bold text-lg">2 spots</p>
             </div>
             <div className="bg-slate-50 rounded-lg p-8 border-2 border-teal-400">
-              <p className="text-2xl font-bold text-slate-900 mb-2">February 5</p>
+              <p className="text-2xl font-bold text-slate-900 mb-2">February 5, 2026</p>
               <p className="text-teal-600 font-bold text-lg">2 spots</p>
             </div>
             <div className="bg-slate-50 rounded-lg p-8 border-2 border-blue-400">
-              <p className="text-2xl font-bold text-slate-900 mb-2">April 22</p>
+              <p className="text-2xl font-bold text-slate-900 mb-2">April 22, 2026</p>
               <p className="text-blue-600 font-bold text-lg">6 spots</p>
             </div>
+          </div>
+
+          <div className="bg-blue-50 rounded-lg p-6 mb-12 border border-blue-200 max-w-2xl mx-auto">
+            <p className="text-slate-700 text-sm"><strong>Blackout: Mar 1–Apr 15</strong> (fulfillment only)</p>
+            <p className="text-slate-600 text-sm mt-3">Reserve with a non-refundable deposit applied to your Sprint. First-come, first-served.</p>
           </div>
 
           <Link href="#contact">
@@ -274,8 +312,55 @@ export default function VetsPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-slate-900 text-center mb-16">Frequently Asked Questions</h2>
+          
+          <div className="space-y-4">
+            {[
+              {
+                q: "What does the on-time credit guarantee cover?",
+                a: "We guarantee a Day 15 month-end close and a scheduled quarterly review. If we miss either for reasons within our control, that cycle's fee is credited. Client delays and third-party outages pause the clock. We do not guarantee IRS outcomes or financial results."
+              },
+              {
+                q: "What's included in the Advisory tier?",
+                a: "Everything in Compliance, plus quarterly tax planning, Vet Profit Scorecard, Tax Savings Certificate, and business + owner returns (current-year)."
+              },
+              {
+                q: "Can I start mid-year?",
+                a: "Yes. We align your close to your fiscal year. The 60-Day Sprint timing depends on your current books; contact us to discuss your specific situation."
+              },
+              {
+                q: "What if I need back books or back taxes cleaned up?",
+                a: "We offer Standard Lane (work begins after Apr 15) and Rush Lane (Jan–Mar start with expedite fee). Pricing is separate; contact us for a quote."
+              },
+              {
+                q: "Is there a contract?",
+                a: "Yes. We use a service agreement tied to the 60-Day Sprint and ongoing monthly billing. Deposits are non-refundable and applied to your first Sprint invoice."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+                <button
+                  onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition"
+                >
+                  <span className="font-semibold text-slate-900 text-left">{item.q}</span>
+                  <HelpCircle className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
+                </button>
+                {expandedFaq === idx && (
+                  <div className="px-6 py-4 bg-slate-50 border-t border-slate-200">
+                    <p className="text-slate-600">{item.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="py-24 bg-slate-50" id="contact">
+      <section className="py-24 bg-white" id="contact">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">Questions? Let&apos;s Talk</h2>
           
@@ -285,11 +370,11 @@ export default function VetsPage() {
               <div className="space-y-6">
                 <div>
                   <p className="text-slate-600 font-semibold mb-2">Phone</p>
-                  <p className="text-lg text-blue-700 font-bold">260-440-2747</p>
+                  <a href="tel:260-440-2747" className="text-lg text-blue-700 hover:text-blue-900 font-bold transition">260-440-2747</a>
                 </div>
                 <div>
                   <p className="text-slate-600 font-semibold mb-2">Email</p>
-                  <p className="text-lg text-blue-700 font-bold">info@deltacpagroup.com</p>
+                  <a href="mailto:info@deltacpagroup.com" className="text-lg text-blue-700 hover:text-blue-900 font-bold transition">info@deltacpagroup.com</a>
                 </div>
                 <div>
                   <p className="text-slate-600 font-semibold mb-2">Location</p>
@@ -298,23 +383,23 @@ export default function VetsPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-8">
+            <div className="bg-white rounded-lg p-8 border border-slate-200">
               <form className="space-y-4">
                 <div>
                   <label className="block text-slate-900 font-semibold mb-2">Name</label>
-                  <input type="text" className="w-full border border-slate-300 rounded-lg px-4 py-2" />
+                  <input type="text" className="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500" />
                 </div>
                 <div>
                   <label className="block text-slate-900 font-semibold mb-2">Email</label>
-                  <input type="email" className="w-full border border-slate-300 rounded-lg px-4 py-2" />
+                  <input type="email" className="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500" />
                 </div>
                 <div>
                   <label className="block text-slate-900 font-semibold mb-2">Practice Name</label>
-                  <input type="text" className="w-full border border-slate-300 rounded-lg px-4 py-2" />
+                  <input type="text" className="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500" />
                 </div>
                 <div>
                   <label className="block text-slate-900 font-semibold mb-2">Message</label>
-                  <textarea className="w-full border border-slate-300 rounded-lg px-4 py-2 h-24"></textarea>
+                  <textarea className="w-full border border-slate-300 rounded-lg px-4 py-2 h-24 focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
                 </div>
                 <Button className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3">Send Message</Button>
               </form>
@@ -330,6 +415,7 @@ export default function VetsPage() {
             <div>
               <h4 className="font-bold text-white mb-4">Delta CPA Group</h4>
               <p className="text-sm">Accounting & Tax Advisory for Veterinary Practices</p>
+              <p className="text-sm mt-4">Fort Wayne, IN</p>
             </div>
             <div>
               <h4 className="font-bold text-white mb-4">Quick Links</h4>
@@ -341,8 +427,8 @@ export default function VetsPage() {
             </div>
             <div>
               <h4 className="font-bold text-white mb-4">Contact</h4>
-              <p className="text-sm mb-2">260-440-2747</p>
-              <p className="text-sm">info@deltacpagroup.com</p>
+              <p className="text-sm mb-2"><a href="tel:260-440-2747" className="hover:text-white transition">260-440-2747</a></p>
+              <p className="text-sm"><a href="mailto:info@deltacpagroup.com" className="hover:text-white transition">info@deltacpagroup.com</a></p>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
