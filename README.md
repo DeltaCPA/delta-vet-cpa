@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Delta CPA - Veterinary Accounting & Tax Website
 
-## Getting Started
+Professional website for Delta CPA Group's veterinary accounting and tax services.
 
-First, run the development server:
+## 🚀 Quick Start
 
+### Local Development
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Visit `http://localhost:3000`
+
+### Build for Production
+```bash
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 How to Update Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Edit Text Content
+Open `app/page.tsx` and find the section you want to edit:
+- **Hero section**: Lines 30-70
+- **What You Get**: Lines 75-110
+- **Services**: Lines 115-200
+- **Guarantee**: Lines 205-225
+- **About**: Lines 230-280
+- **CTA**: Lines 285-305
+- **Footer**: Lines 310-330
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Change Colors
+All colors use Tailwind CSS classes. Search for:
+- `bg-teal-600` - Teal buttons and accents
+- `bg-slate-900` - Navy/dark backgrounds
+- `text-white` - White text
 
-## Learn More
+Replace with your preferred colors.
 
-To learn more about Next.js, take a look at the following resources:
+### Add Images
+1. Place images in `public/` folder
+2. Import in `app/page.tsx`:
+   ```jsx
+   import Image from 'next/image';
+   ```
+3. Use in JSX:
+   ```jsx
+   <Image src="/image-name.jpg" alt="Description" width={400} height={300} />
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Making Changes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Edit files locally
+2. Test with `npm run dev`
+3. Push to GitHub:
+   ```bash
+   git add .
+   git commit -m "Your change description"
+   git push origin main
+   ```
+4. Vercel automatically deploys!
 
-## Deploy on Vercel
+## 📦 Project Structure
+```
+vet-accounting/
+├── app/
+│   ├── page.tsx          # Main website content
+│   ├── layout.tsx        # Global layout
+│   └── favicon.ico       # Browser tab icon
+├── components/
+│   └── ui/               # Reusable UI components
+├── public/               # Static files (images, etc)
+├── package.json          # Dependencies
+└── tailwind.config.ts    # Tailwind CSS config
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Go to [vercel.com](https://vercel.com)
+2. Sign in with GitHub
+3. Click "New Project"
+4. Select this repository
+5. Click "Deploy"
+6. Point your domain in GoDaddy DNS settings
+
+## 📞 Contact Info
+- Email: info@deltacpagroup.com
+- Phone: 260-440-2747
+- Location: Fort Wayne, IN
+
+## 📄 License
+© 2025 Delta CPA Group. All rights reserved.
