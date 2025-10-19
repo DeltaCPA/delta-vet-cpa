@@ -161,7 +161,7 @@ export default function VetsPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Handoff to Recurring Cadence</h3>
-                  <p className="text-slate-600">You move to your chosen tier (Compliance, Advisory, or CFO). Day 15 closes and quarterly reviews begin on schedule.</p>
+                  <p className="text-slate-600">You move to your chosen service level. Day 15 closes and quarterly reviews begin on schedule.</p>
                 </div>
               </div>
             </div>
@@ -175,22 +175,17 @@ export default function VetsPage() {
         </div>
       </section>
 
-      {/* Services - 3 Tiers */}
+      {/* Services Overview - No Pricing */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-slate-900 text-center mb-4">Three Standardized Tiers</h2>
-          <p className="text-center text-slate-600 mb-16 max-w-2xl mx-auto">Every 4 weeks billing (13 cycles/year). Add-ons available for complexity.</p>
+          <h2 className="text-4xl font-bold text-slate-900 text-center mb-4">Three Service Levels</h2>
+          <p className="text-center text-slate-600 mb-16 max-w-2xl mx-auto">Customized to your practice&apos;s needs. Billed every 4 weeks (13 cycles/year).</p>
           
           <div className="grid grid-cols-3 gap-8 mb-12">
             {/* Compliance */}
             <Card className="p-8 border-2 border-slate-200 hover:border-blue-400 transition">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Compliance</h3>
               <p className="text-slate-600 mb-6">For practices wanting clean books & tax returns.</p>
-              <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                <p className="text-sm text-slate-600">Starting at</p>
-                <p className="text-3xl font-bold text-blue-900">$2,500</p>
-                <p className="text-xs text-slate-500">per cycle (13/year)</p>
-              </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
@@ -217,11 +212,6 @@ export default function VetsPage() {
               <div className="absolute top-4 right-4 bg-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold">MOST POPULAR</div>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Advisory</h3>
               <p className="text-slate-600 mb-6">For practices wanting tax savings & growth clarity.</p>
-              <div className="bg-teal-100 rounded-lg p-4 mb-6">
-                <p className="text-sm text-slate-600">Starting at</p>
-                <p className="text-3xl font-bold text-teal-700">$4,200</p>
-                <p className="text-xs text-slate-500">per cycle (13/year)</p>
-              </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
@@ -247,11 +237,6 @@ export default function VetsPage() {
             <Card className="p-8 border-2 border-slate-200 hover:border-blue-400 transition">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">CFO</h3>
               <p className="text-slate-600 mb-6">For practices scaling & optimizing operations.</p>
-              <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                <p className="text-sm text-slate-600">Starting at</p>
-                <p className="text-3xl font-bold text-blue-900">$6,500</p>
-                <p className="text-xs text-slate-500">per cycle (13/year)</p>
-              </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
@@ -276,23 +261,19 @@ export default function VetsPage() {
 
           {/* Add-ons */}
           <div className="bg-slate-50 rounded-lg p-8">
-            <h3 className="text-xl font-bold text-slate-900 mb-6">Add-Ons (À la carte)</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Add-Ons Available</h3>
             <div className="grid grid-cols-2 gap-6">
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
                 <span className="text-slate-700">Extra entity (S-Corp, LLC, etc.)</span>
-                <span className="font-bold text-slate-900">+$800/cycle</span>
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
                 <span className="text-slate-700">Multi-location (per location)</span>
-                <span className="font-bold text-slate-900">+$600/cycle</span>
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
                 <span className="text-slate-700">Payroll band (50-100 employees)</span>
-                <span className="font-bold text-slate-900">+$400/cycle</span>
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
                 <span className="text-slate-700">Inventory & sales tax module</span>
-                <span className="font-bold text-slate-900">+$500/cycle</span>
               </div>
             </div>
           </div>
