@@ -232,10 +232,10 @@ export default function VetsPage() {
                 <span className="text-slate-700">Extra entity (S-Corp, LLC, etc.)</span>
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
-                <span className="text-slate-700">Multi-location (per location)</span>
+                <span className="text-slate-700">Multi-location</span>
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
-                <span className="text-slate-700">Payroll band (50-100 employees)</span>
+                <span className="text-slate-700">Payroll</span>
               </div>
               <div className="flex justify-between items-center pb-4 border-b border-slate-200">
                 <span className="text-slate-700">Inventory & sales tax module</span>
