@@ -1,0 +1,20 @@
+
+> vet-accounting@0.1.0 build
+> next build --turbopack
+
+   ▲ Next.js 15.5.3 (Turbopack)
+
+   Creating an optimized production build ...
+ ✓ Finished writing to disk in 18ms
+ ✓ Compiled successfully in 6.4s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./app/page.tsx
+210:83  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+213:87  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+228:133  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+274:64  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
